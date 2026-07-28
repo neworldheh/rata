@@ -1,7 +1,22 @@
+*{
+    transition:.2s ease;
+    -webkit-user-select:none;
+    user-select:none;
+}
 body{
     margin: 0;
     display: flex;
     background:#0d0d0d;
+    padding-top:env(safe-area-inset-top);
+    padding-bottom:env(safe-area-inset-bottom);
+    padding-left:env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
+    font-family:Arial,Helvetica,sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    margin-top: 5vh;
 }
 .card{
     width: 80vw;
@@ -15,12 +30,15 @@ body{
     align-items: center;
 }
 .title{
+    margin-left: 5vw;
     width: 50%;
 }
 input{
-    width: 70%;
+    width: 50%;
     background: #1c1c1e;
     border: none;
     text-align: right;
     color: white;
+    font-size: 18px;
+    margin-right: 5vw;
 }
