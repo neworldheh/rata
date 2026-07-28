@@ -14,14 +14,25 @@
 </head>
 <body>
     <div class="top">Pożyczki/Hipoteka</div>
+    <span>Szczegóły</span>
     <div class="row">
         <div class="loan">
-        <span>Szczegóły</span>
         <div class="card">
-            <div class="title">Kwota Pożyczki</div><input type="number" placeholder="300000" onChange="wynik()"></input>
+            <div class="title">Kwota Pożyczki</div><input type="text" placeholder="300000" onChange="wynik()"></input>
         </div>
+        <hr>
         <div class="card">
-            <div class="title">Stopa Roczna</div><input type="text" placeholder="5" onChange="wynik()"></input>
+            <div class="title">Stopa Roczna</div><input type="text" placeholder="5" onChange="wynik()"></input><div class="value">
+    <input>
+    <span>%</span>
+</div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="title">Okres Pożyczki</div><input type="text" placeholder="10" onChange="wynik()"></input><div class="value">
+    <input>
+    <span>Years</span>
+</div>  
         </div>
         </div>
     </div>
