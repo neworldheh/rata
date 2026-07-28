@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    display: flex;
+    background:#0d0d0d;
+}
+.card{
+    width: 80vw;
+    height: 10vh;
+    background-color: #1c1c1e;
+    /* filter: blur(10px); */
+    color: white;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    width: 50%;
+}
+input{
+    width: 70%;
+    background: #1c1c1e;
+    border: none;
+    text-align: right;
+    color: white;
+}
