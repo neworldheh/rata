@@ -1,9 +1,11 @@
-let input1 = document.querySelectorAll("input")[0]
-let input2 = document.querySelectorAll("input")[1]
-let input3 = document.querySelectorAll("input")[2]
-let payment = document.querySelectorAll(".loan")[1]
 let mpayment = document.querySelector(".wynik")
-function wynik() {
-    let mstopa = input2.value / 12
-    mpayment.innerHTML = mstopa
+
+function wynik(){
+    let cvalue = Number(document.querySelectorAll("input")[0].value);
+    let rrso = Number(document.querySelectorAll("input")[1].value) / 100
+    let years = Number(document.querySelectorAll("input")[2].value) * 12
+    let mrrso = rrso / 12;
+    let rata = (cvalue * mrrso) / (1 - Math.pow(1 + mrrso, -years))
+    
+    mpayment.innerHTML = rata.toFixed(2) + " PLN"
 }
