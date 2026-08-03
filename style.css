@@ -69,4 +69,122 @@ hr{
 .wynik{
     color: rgb(103, 205, 103);
     font-size: 120%;
+    font-weight: bold;
+}
+.row{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.loan:first-child{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
+    background:rgba(255,255,255,.03);
+    isolation:isolate;
+}
+.loan:first-child::before{
+    content:"";
+    position:absolute;
+    inset:-35%;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at 20% 20%,
+    rgba(255,105,180,.28),transparent 45%),
+
+    radial-gradient(circle at 80% 30%,
+    rgba(160,90,255,.28),transparent 45%),
+
+    radial-gradient(circle at 60% 80%,
+    rgba(0,255,255,.24),transparent 45%),
+
+    radial-gradient(circle at 30% 70%,
+    rgba(40,90,255,.22),transparent 45%);
+
+    filter:blur(90px);
+    animation:heartbeat 8s ease-in-out infinite;
+}
+.loan:first-child::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+
+    background:rgba(20,20,28,.58);
+
+    backdrop-filter:blur(35px);
+    -webkit-backdrop-filter:blur(35px);
+}
+@keyframes heartbeat{
+
+    0%{
+        transform:scale(1);
+        opacity:.55;
+    }
+
+    12%{
+        transform:scale(1.035);
+        opacity:.75;
+    }
+
+    22%{
+        transform:scale(1);
+        opacity:.6;
+    }
+
+    35%{
+        transform:scale(1.05);
+        opacity:.82;
+    }
+
+    50%{
+        transform:scale(1.015);
+        opacity:.65;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:.55;
+    }
+
+}
+.loan-update{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(-15px);
+
+    margin:0 18px;
+    padding-left:2px;
+
+    transition:
+    max-height .45s ease,
+    opacity .35s ease,
+    transform .45s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.loan-update.show{
+    max-height:70px;
+    opacity:1;
+    transform:translateY(0);
+    margin-bottom:14px;
+}
+
+
+.updated-value{
+    font-size:15px;
+    color:#e8e8e8;
+    font-weight:500;
+}
+
+
+.commission-info{
+    margin-top:3px;
+    font-size:13px;
+    color:#8e8e93;
 }
