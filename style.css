@@ -13,6 +13,7 @@ body{
         16px
         calc(env(safe-area-inset-bottom) + 20px);
     min-height:100dvh;
+    overflow: hidden;
 }
 span{
     display:block;

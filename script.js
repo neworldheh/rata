@@ -2,8 +2,29 @@ const mpayment = document.querySelector(".wynik");
 const updatedValue = document.querySelector(".updated-value");
 const commissionInfo = document.querySelector(".commission-info");
 const loanUpdate = document.querySelector(".loan-update");
+const inputs = document.querySelectorAll("input");
 
+// wczytanie zapisanych wartości
+inputs.forEach((input, index) => {
+    const saved = localStorage.getItem("loan_" + index);
+
+    if(saved !== null){
+        input.value = saved;
+    }
+
+    input.addEventListener("input", () => {
+        localStorage.setItem(
+            "loan_" + index,
+            input.value
+        );
+    });
+});
 function wynik() {
+    // let przerwa = document.querySelectorAll("input")[0]
+    // if(przerwa.value.toString().length % 4 == 0){
+    //     przerwa.value = `${przerwa.value} `
+    // }
+
     let cvalue = Number(document.querySelectorAll("input")[0].value) || 0;
     let rrso = (Number(document.querySelectorAll("input")[1].value) || 0) / 100;
     let years = (Number(document.querySelectorAll("input")[2].value) || 0) * 12;
