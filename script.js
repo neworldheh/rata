@@ -1,5 +1,4 @@
 let mpayment = document.querySelector(".wynik")
-document.querySelectorAll("input")[3].innerHTML = 0
 function wynik(){
     let cvalue = Number(document.querySelectorAll("input")[0].value);
     let rrso = Number(document.querySelectorAll("input")[1].value) / 100
