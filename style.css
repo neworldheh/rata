@@ -189,3 +189,23 @@ hr{
     font-size:13px;
     color:#8e8e93;
 }
+.footer{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:calc(env(safe-area-inset-bottom) + 12px);
+
+    text-align:center;
+    font-size:13px;
+    color:#8e8e93;
+}
+
+.footer a{
+    color:#b6b6b6;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.footer a:hover{
+    color:white;
+}
